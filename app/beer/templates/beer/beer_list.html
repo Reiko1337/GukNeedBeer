@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}ГУКЯРЫ SHOP{% endblock %}
+{% block content %}
+{% for message in messages %}
+<div class="{{ message.tags }}">{{ message|safe }}</div>
+{% endfor %}
+<div class="beer">
+    <div class="search">
+        <form>
+            <div class="order">
+                {{ form.ordering.label_tag }}
+                {{ form.ordering }}
+                <button type="submit" class="btn_beer_search">Поиск</button>
+            </div>
+        </form>
+        <form>
+            <div class="form-input-search">
+
+                <input type="text" autocomplete="off" name="filter" placeholder="Поиск">
+                <button type="submit" class="btn_beer_search">Поиск</button>
+
+            </div>
+        </form>
+    </div>
+
+    {% if beers|length > 0 %}
+    <table class="beer_table" border="3">
+        <tr class="header">
+            <td>Фото</td>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Оценка</td>
+            <td>Редактировать</td>
+        </tr>
+        {% for beer in beers %}
+        <tr>
+            <td><img src="{{ MEDIA_URL }}{{ beer.image.url }}" alt="Beer" width="200px"></td>
+            <td>{{ beer.name }}</td>
+            <td>{{ beer.price }} BYN</td>
+            <td>{{ beer.rating }}</td>
+            <td>
+                <div class="btn_list_center">
+                    <div class="buttons_list_beer">
+                     <div class="btn_list_beer btn_del_beer">
+                    <a href="{% url 'delete_beer' beer.id %}">Удалить</a>
+                </div>
+                <div class="btn_list_beer btn_edit_beer">
+                    <a href="{% url 'edit_beer' beer.id %}">Редактировать</a>
+                </div>
+            </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>Вы закодированы?</p>
+    {% endif %}
+    {% if beers.has_other_pages %}
+    <div class="pagination_center">
+        <div>
+            <ul class="pagination">
+                {% if  beers.has_previous %}
+                <li><a href="?page={{ beers.previous_page_number }}{% if request.GET.filter %}&filter={{ request.GET.filter }}{% endif %}{% if request.GET.ordering %}&ordering={{ request.GET.ordering }}{% endif %}">«</a></li>
+                {% else %}
+                <li><a>«</a></li>
+                {% endif %}
+                {% for n in beers.paginator.page_range %}
+                {% if beers.number == n %}
+                <li><a class="active" href="?page={{ n }}{% if request.GET.filter %}&filter={{ request.GET.filter }}{% endif %}{% if request.GET.ordering %}&ordering={{ request.GET.ordering }}{% endif %}">{{ n }}</a></li>
+                {% elif n > beers.number|add:-3 and  n < beers.number|add:3 %}
+                <li><a href="?page={{ n }}{% if request.GET.filter %}&filter={{ request.GET.filter }}{% endif %}{% if request.GET.ordering %}&ordering={{ request.GET.ordering }}{% endif %}">{{ n }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if beers.has_next %}
+                <li><a href="?page={{ beers.next_page_number }}{% if request.GET.filter %}&filter={{ request.GET.filter }}{% endif %}{% if request.GET.ordering %}&ordering={{ request.GET.ordering }}{% endif %}">»</a></li>
+                {% else %}
+                <li><a>»</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

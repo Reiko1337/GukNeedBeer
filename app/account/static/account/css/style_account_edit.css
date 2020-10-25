@@ -1,0 +1,142 @@
+.edit{
+	width: 1180px;
+	background: #4E4E50;
+	border-radius: 50px;
+	margin-top: 180px;
+	padding-bottom: 50px;
+}
+.edit_acc{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 44px;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 50px;
+}
+.form-input-edit{
+	display: flex;
+	align-items: center;
+}
+.form-input-edit input{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding: 5px;
+	background: #4E4E50;
+	color: #FFF;
+	outline: none;
+	width: 350px;
+	height: 30px;
+	text-align: center;
+	border-bottom: 5px solid #950740;
+	margin-left: 5px;
+}
+.form-input-edit input::placeholder{
+	color: #FFF;
+	text-align: center;
+}
+.form-input-edit input:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.info_profile_edit{
+	display: flex;
+}
+.img_border_edit{
+	width: 280px;
+	height: 280px;
+	background: #950740;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	margin-left: 80px;
+}
+.img_border_edit img{
+	width: 240px;
+	height: 240px;
+	border-radius: 50px;
+}
+.info_user_edit{
+	margin-top: 85px;
+	margin-left: 20px;
+}
+.info_user_edit li{
+	list-style: none;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 30px;
+	line-height: 37px;
+	color: #FFFFFF;
+}
+.info_user_edit span{
+	text-decoration: underline;
+}
+.buttons_edit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top:10px;
+}
+.btn_save{
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	border: none;
+	width: 180px;
+	background: #950740;
+	border-radius: 50px;
+	font-size: 20px;
+	color: #FFF;
+	outline: none;
+	text-decoration: underline;
+}
+.btn a{
+	display: block;
+	color: #FFF;
+	height: 100%;
+}
+.btn{
+	text-align: center;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+	outline: none;
+	text-decoration: underline;
+}
+.btn_edit_password{
+	width: 400px;
+	margin-left: 40px;
+	background: #00FF29;
+}
+.form-input-edit-image{
+	display: flex;
+	align-items: center;
+}
+.form-input-edit-image input{
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding: 5px;
+	color: #FFF;
+	margin-left: 5px;
+}
+.error_msg_edit{
+    color: #FFF;
+    text-align: center;
+    font-style: normal;
+	font-weight: 900;
+	background: red;
+	margin: 5px 5px;
+	border-radius: 50px;
+	font-size: 13px;
+}

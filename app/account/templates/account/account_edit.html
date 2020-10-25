@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}ГУКЯРЫ SHOP{% endblock %}
+{% block content %}
+{% for message in messages %}
+<div class="{{ message.tags }}">{{ message|safe }}</div>
+{% endfor %}
+<div class="edit">
+    <form method="post" enctype="multipart/form-data">
+        <div class="edit_acc">Редактировать профль</div>
+        <div class="info_profile_edit">
+            <div class="img_border_edit">
+                <img src="{{ MEDIA_URL }}{{ user.infouser.image.url }}" alt="Image_User_edit">
+            </div>
+            <div class="info_user_edit">
+                {% csrf_token %}
+                <div class="error_msg_edit">{{ form.non_field_errors|striptags }}</div>
+                <ul>
+                    <li>Имя пользователя: <span>{{ user.username }}</span></li>
+                    <li>Email: <span>{{ user.email }}</span></li>
+                    <li>
+                        <div class="form-input-edit">
+                            {{ form.first_name.label_tag }}
+                            {{ form.first_name }}
+                        </div>
+                        <div class="error_msg_edit">{{ form.first_name.errors|striptags }}</div>
+                    </li>
+                    <li>
+                        <div class="form-input-edit">
+                            {{ form.last_name.label_tag }}
+                            {{ form.last_name }}
+                        </div>
+                        <div class="error_msg_edit">{{ form.last_name.errors|striptags }}</div>
+                    </li>
+                    <li><div class="form-input-edit-image">
+						{{ form_image.image.label_tag }}
+                        {{ form_image.image }}
+					</div>
+                        <div class="error_msg_edit">{{ form_image.image.errors|striptags }}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="buttons_edit">
+            <button type="submit" class="btn btn_save">Сохранить</button>
+            <div class="btn btn_edit_password">
+                <a href="{% url 'password_change' %}">Изменить пароль</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

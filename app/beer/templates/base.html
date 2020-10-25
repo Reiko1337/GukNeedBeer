@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'beer/css/style_shop.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_profile.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_reg.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_reset_password.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_account_edit.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'account/css/style_password_change.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'beer/css/style_beer_info.css' %}">
+	<script src="{% static 'shop/js/main.js' %}"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="navigation">
+				<nav>
+					<div class="logo">ХОЧУ ПИВО</div>
+					<ul>
+						<li><a href="{% url 'beer' %}">Главная</a></li>
+						<li><a href="{% url 'registration' %}">Регистрация</a></li>
+						<li><a href="{% url 'login' %}">Авторизация</a></li>
+						<li><a href="{% url 'account' %}">Профиль</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="wrapper">
+		{% block content %}
+		{% endblock %}
+	</div>
+	</section>
+</body>
+</html>

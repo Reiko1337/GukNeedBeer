@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}ГУКЯРЫ SHOP{% endblock %}
+{% block content %}
+{% for message in messages %}
+        <div class="message {{ message.tags }}">{{ message|safe }}</div>
+    {% endfor %}
+<div class="login">
+    <div class="aut">Авторизация</div>
+        <form method="POST">
+        {% csrf_token %}
+        <div class="error_msg">{{ form.non_field_errors|striptags }}</div>
+        {% for field in form %}
+        <div class="form-input">
+            {{ field }}
+        </div>
+        <div class="error_msg">{{ field.errors|striptags }}</div>
+        {% endfor %}
+            <a href="{% url 'password_reset' %}">Забыли пароль?</a>
+        <div class="form-input">
+            <button type="submit" class="btn_login">Войти</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+

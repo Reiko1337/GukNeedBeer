@@ -1,0 +1,325 @@
+.beer{
+	width: 1180px;
+	background: #4E4E50;
+	border-radius: 50px;
+	margin-top: 10px;
+	color: #FFF;
+	padding: 30px;
+}
+.beer_table{
+	border: 3px solid #FFF;
+	border-collapse: collapse;
+  	width: 100%;
+}
+.beer_table td{
+
+	text-align: center;
+	font-size: 25px;
+}
+.header{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 44px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 25px;
+}
+td {
+	padding: 8px;
+	border-bottom: 1px solid #FFF;
+}
+
+
+.beer_add_form{
+	width: 1180px;
+	padding-bottom: 20px;
+	background: #4E4E50;
+	border-radius: 50px;
+	margin-top: 200px;
+	color: #FFF;
+}
+.beer_add_text{
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 44px;
+	color: #FFFFFF;
+	text-align: center;
+	padding-top: 20px;
+}
+.form-input-beer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-input-beer input{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding: 5px;
+	background: #4E4E50;
+	color: #FFF;
+	outline: none;
+	width: 410px;
+	height: 30px;
+	text-align: center;
+	border-bottom: 5px solid #950740;
+	margin-left: 5px;
+}
+.form-input-beer input::placeholder{
+	color: #FFF;
+	text-align: center;
+}
+.form-input-beer input:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.buttons_beer_add{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top:10px;
+}
+.btn_beer_add{
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	border: none;
+	width: 180px;
+	background: #950740;
+	border-radius: 50px;
+	font-size: 20px;
+	color: #FFF;
+	outline: none;
+	text-decoration: underline;
+}
+.btn{
+	text-align: center;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+	outline: none;
+	text-decoration: underline;
+}
+.form-input-beer-image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.form-input-beer-image label{
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding-left: 45px;
+}
+.form-input-beer-image input{
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding: 5px;
+	color: #FFF;
+	margin-left: 5px;
+	width: 350px;
+}
+.beer_add_image{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 900px;
+}
+.sss{
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+}
+.error_msg_add_beer{
+    color: #FFF;
+    text-align: center;
+    font-style: normal;
+	font-weight: 900;
+	background: red;
+	margin: 5px 5px;
+	border-radius: 50px;
+	font-size: 13px;
+    padding: 0px 5px;
+}
+.form-input-search{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 415px;
+}
+.form-input-search input{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	padding: 5px;
+	background: #4E4E50;
+	color: #FFF;
+	outline: none;
+	width: 270px;
+	height: 20px;
+	text-align: center;
+	border-bottom: 5px solid #950740;
+}
+.form-input-search input::placeholder{
+	color: #FFF;
+	text-align: center;
+}
+.form-input-search input:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.btn_beer_search{
+	border: none;
+	width: 120px;
+	background: #950740;
+	border-radius: 50px;
+	font-size: 20px;
+	color: #FFF;
+	outline: none;
+	text-decoration: underline;
+	font-weight: bold;
+	height: 27px;
+}
+.btn_beer_search:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.btn_beer_search:hover {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.select {
+	text-align: center;
+	display: block;
+    background: transparent;
+    width: 250px;
+    border-bottom: 5px solid #950740;
+    color: #FFF;
+    height: 35px;
+    outline: none;
+    font-size: 20px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+}
+.select::placeholder{
+	color: #FFF;
+	text-align: center;
+}
+.select:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.order{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	width: 540px;
+}
+.order label{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 0px;
+}
+option{
+	height: 20px;
+	background: #4E4E50;
+	padding: 5px;
+}
+.btn_del_beer{
+    width: 240px;
+	background: #ff0000;
+}
+.btn_edit_beer{
+	margin-top: 10px;
+    width: 240px;
+	background: #00FF29;
+}
+.btn_list_beer a{
+	display: block;
+	color: #FFF;
+	height: 100%;
+}
+.btn_list_beer{
+	text-align: center;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 44px;
+	border: none;
+	border-radius: 50px;
+	font-size: 20px;
+	outline: none;
+	text-decoration: underline;
+}
+.btn_list_beer:focus{
+	border-color: #66afe9;
+  	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.btn_list_beer:hover {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.btn_list_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buttons_list_beer{
+
+	align-items: center;	
+}
+
+.pagination_center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+
+
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: #FFF;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #950740;
+    color: white;
+    border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}

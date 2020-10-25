@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}ГУКЯРЫ SHOP{% endblock %}
+{% block content %}
+{% for message in messages %}
+<div class="{{ message.tags }}">{{ message|safe }}</div>
+{% endfor %}
+<div class="profile">
+    <div class="info_profile">
+        <div class="img_border">
+            <img src="{{ MEDIA_URL }}{{ user.infouser.image.url }}" alt="Image_User">
+        </div>
+        <div class="info_user">
+            <ul>
+                <li>Имя пользователя: <span>{{ user.username }}</span></li>
+                <li>Email: <span>{{ user.email }}</span></li>
+                {% if user.first_name %}
+                <li>Имя: <span>{{ user.first_name }}</span></li>
+                {% else %}
+                <li>Имя: <span>Отсутствует</span></li>
+                {% endif %}
+                {% if user.last_name %}
+                <li>Фамилия: <span>{{ user.last_name }}</span></li>
+                {% else %}
+                <li>Фамилия: <span>Отсутствует</span></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div class="btn_center">
+        <div class="buttons">
+        <div class="btn btn_logout">
+            <a href="{% url 'logout' %}">Выйти</a>
+        </div>
+        <div class="btn btn_edit_profile">
+            <a href="{% url 'account_edit' %}">Редактировать профиль</a>
+        </div>
+        <div class="btn btn_add_beer">
+            <a href="{% url 'beer_add' %}">Добавить пиво</a>
+        </div>
+        <div class="btn btn_list_beer">
+            <a href="{% url 'list_beer' %}">Моё пиво</a>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

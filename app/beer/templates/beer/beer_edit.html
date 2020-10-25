@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}ГУКЯРЫ SHOP{% endblock %}
+{% block content %}
+{% for message in messages %}
+<div class="{{ message.tags }}">{{ message|safe }}</div>
+{% endfor %}
+<div class="beer_add_form">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="beer_add_text">Редактировать пиво</div>
+        <div class="sss">
+            <div class="beer_add_image">
+                <div class="beer_form">
+
+                    <div class="form-input-beer">
+                        {{ form.name }}
+                    </div>
+                     <div class="error_msg_add_beer">{{ form.name.errors|striptags }}</div>
+                    <div class="form-input-beer">
+                        {{ form.price }}
+                    </div>
+                    <div class="error_msg_add_beer">{{ form.price.errors|striptags }}</div>
+                    <div class="form-input-beer">
+                        {{ form.rating }}
+                    </div>
+                    <div class="error_msg_add_beer">{{ form.rating.errors|striptags }}</div>
+                    <div class="form-input-beer-image">
+                        {{ form.image.label_tag }}
+                        {{ form.image }}
+                    </div>
+                    <div class="error_msg_add_beer">{{ form.image.errors|striptags }}</div>
+
+                </div>
+                <div class="beer_image">
+                    <img id="uploadPreview" width="300px" src="{{ MEDIA_URL }}{{ beer.image.url }}">
+                </div>
+            </div>
+        </div>
+        <div class="buttons_beer_add">
+            <button type="submit" class="btn btn_beer_add">Сохранить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
